@@ -1,5 +1,4 @@
 body {
-	background: url(/assets/img/bg.png) center no-repeat;
 
 	background-color: #1a1a1a;
 	background-size: cover;
@@ -8,6 +7,7 @@ body {
 	font-size: 14px;
 	color: #010101;
 
+	margin: 20px;
 
 }
 
@@ -21,7 +21,7 @@ hr {
 .main {
 	display: flex;
 	flex-direction: row-reverse;
-	width: 1200px;
+	max-width: 1080px;
 	margin: 40px auto;
 	box-shadow: 10px 10px 50px #000;
 	border-radius: 26px;	
@@ -35,10 +35,7 @@ hr {
 /* Main Content */
 .main-content {
     background: #adffd557;
-	padding-top: 102px;
-	padding-left: 88px;
-	padding-right: 88px;
-	padding-bottom: 107px;
+padding: 100px 40px;
 	border-radius: 0 26px 26px 0;
 }
 .about {
@@ -90,6 +87,7 @@ hr {
     margin-bottom: 11px;
     font-style: normal;
     font-weight: bold;
+	
     font-size: 16px;
     line-height: 20px;
     justify-content: space-between;
@@ -99,6 +97,8 @@ hr {
 	font-weight: bold;
 	font-size: 16px;
 	line-height: 20px;
+	text-align: right;
+
 	color: #29b65f;
 }
 .work-period {
@@ -106,7 +106,7 @@ hr {
 	font-weight: normal;
 	font-size: 12px;
 	line-height: 15px;
-	color: #a8a8a8;
+	color: #ddd;
 	margin-bottom: 20px;
 }
 
@@ -149,7 +149,7 @@ hr {
 	font-weight: normal;
 	font-size: 12px;
 	line-height: 15px;
-	color: #a8a8a8;
+	color: #ddd;
 }
 /* Sidebar */
 .sidebar {
@@ -186,12 +186,19 @@ hr {
 .contacts-link {
 	text-decoration: none;
 	font-size: 14px;
-	color: #fff;
-	opacity: 14%;
+	color: #29b65f;
 	margin-left: 12px;
+	opacity: .5;
+
+	transition: opacity .2s linear;
 }
 .contacts-link:hover {
-	text-decoration: underline;
+	opacity: 1;
+
+	transition: opacity .2s linear;
+}
+.skills {
+	max-width: 235px;
 }
 
 .tech-skills {
@@ -231,4 +238,44 @@ hr {
 	color: #50fb3a;
 
 	padding-right: 10px;
+}
+
+
+/* @Media */
+
+@media (max-width: 575px) {
+	body {
+		margin: 15px;
+	}
+	.main {
+		flex-direction: column-reverse;
+		margin: 0 auto;
+	}
+	.main-content {
+		padding: 60px 30px;
+		border-radius: 0px 0px 26px 26px;
+	}
+
+
+
+	.sidebar {
+		
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 26px 26px 0 0;
+	}
+
+	.skills {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		margin-bottom: 40px;
+	}
+	.contacts, .tech-skills, .soft-skills {
+		margin: 0;
+	}
+
 }
