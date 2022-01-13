@@ -128,8 +128,48 @@
             </div>    
         </div>
         
+        <div class="hello">
+            <div class="hello__button">
+                <button class="btn" data-modal="#hello" >Не натискати!</button>
+            </div>
+        </div>
+        
     </aside>
+
+    <!-- Modal -->
+    <div class="modal" type="button" id="hello">
+        <div class="modal__inner">
+            <div class="modal__content">
+                <p class="modal__text">Hello World!</p>
+                <form class="form" action="/" method="post">
+                    <div class="form__group">
+                        <input type="text" class="input" placeholder="Ім'я">
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" class="input" placeholder="Телефон">
+                    </div>
+                    <div class="form__group">
+                        <input type="email" class="input" placeholder="E-mail">
+                    </div>
+                    <div class="form__group">
+                        <!-- <input type="text" class="input" placeholder="Повідомлення"> -->
+                        <textarea class="input" name="" id="" cols="30" rows="10" placeholder="Повідомлення"></textarea>
+                    </div>
+                    <button class="btn" type="submit"><span>Надіслати</span></button>
+                </form>
+
+                <button class="modal__close" type="button">
+                    <img src="/assets/img/close.svg" alt="Close" data-modal-close>
+                </button>
+            </div>
+        </div>
+    </div>
 </div><!-- /Main-->
+
+
+<!-- JavaScript -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/app.js"></script>
 
 </body>
 </html>

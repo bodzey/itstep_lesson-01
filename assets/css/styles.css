@@ -11,6 +11,10 @@ body {
 
 }
 
+body.no-scroll {
+	overflow: hidden;
+}
+
 .main__splitter {
 	margin: 0 0 20px;
   	height: 1px;
@@ -18,6 +22,10 @@ body {
  	background-color: #303030;
 
 	opacity: .5;
+}
+
+textarea {
+	resize: none;
 }
 /* Main */
 .main {
@@ -303,7 +311,159 @@ body {
 
 }
 
+.hello {
+	display: flex;
+	width: 100%;
 
+	justify-content: center;
+
+	margin-bottom: 40px;
+}
+/* Button */
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 15px 45px;
+	position: relative;
+	overflow: hidden;
+
+	background-color: #333;
+	border: none;
+	border-radius: 14px;
+
+
+	color: #fff;
+	text-align: center;
+	line-height: 1.1;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.btn:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	background-color: #000;
+	opacity: 0;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	transition: opacity 0.2s linear;
+}
+.btn span {
+	position: relative;
+	z-index: 2;
+}
+.btn:hover:before {
+	opacity: 0.3;
+}
+
+/* Modals */
+
+.modal {
+	display: none;
+
+	width: 100%;
+	height: 100%;
+	/* padding: 30px 15px; */
+	overflow-y: auto;
+
+	background-color: rgba(0, 0, 0, 0.9);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+.modal.show {
+	display: block;
+}
+.modal__inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}
+.modal__content {
+	width: 100%;
+	max-width: 400px;
+	padding: 25px;
+
+	position: relative;
+
+	background-color: #cfcfcf;
+	border-radius: 26px;
+	transform: scale(0.5);
+	opacity: 0;
+	transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.modal__text {
+	font-size: 48px;
+	text-align: center;
+}
+
+.modal__close {
+	width: 20px;
+	height: 20px;
+
+	position: absolute;
+	top: -30px;
+	right: -25px;
+
+	background: none;
+	border: none;
+
+	cursor: pointer;
+
+	transition: transform 0.1s linear;
+}
+.modal__close:focus {
+	outline: none;
+}
+.modal__close:hover {
+	transform: scale(1.2);
+}
+
+
+/* Form */
+
+.input {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+
+	margin-bottom: 15px;
+
+	background: none;
+	border: none;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+
+
+	font-size: 16px;
+	color: #000000;
+
+	transition: border-color 0.2s linear;
+}
+
+.input::placeholder {
+	color: rgba(0, 0, 0, 0.5);
+	opacity: 1;
+	transition: opacity 0.1s linear;
+}
+.input:focus {
+	outline: none;
+	border-bottom-color: rgb(255, 255, 255);
+}
+
+.input:focus::placeholder {
+	opacity: 0;
+}
 /* @Media */
 
 @media (max-width: 575px) {
@@ -333,6 +493,14 @@ body {
 
 	.contacts, .tech-skills, .soft-skills {
 		margin: 0;
+	}
+
+	.modal__content {
+		max-width: 180px;
+	}
+	
+	.modal__text {
+		font-size: 24px;
 	}
 
 }
