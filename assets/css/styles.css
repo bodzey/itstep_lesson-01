@@ -15,6 +15,12 @@ body.no-scroll {
 	overflow: hidden;
 }
 
+iframe {
+	border: 0;
+}
+table {
+	font-size: 24px;
+}
 .main__splitter {
 	margin: 0 0 20px;
   	height: 1px;
@@ -26,6 +32,24 @@ body.no-scroll {
 
 textarea {
 	resize: none;
+}
+ul {
+	margin: 0;
+}
+li {
+	display: inline;
+	list-style-type: none;
+}
+td {
+	font-weight: bold;
+}
+td>a {
+	font-weight: normal;
+	text-decoration: none;
+	color: inherit;
+}
+td>a:hover {
+	text-decoration: underline;
 }
 /* Main */
 .main {
@@ -40,18 +64,78 @@ textarea {
 	display: flex;
 	flex-direction: row-reverse;
 }
+
+.page.page--contacts {
+	display: block;
+}
 .container {
 	display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
+.container.container--contacts {
+	flex-direction: column;
+}
+.header {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	height: 50px;
+
+	background-color: hsla(0, 0%, 0%, 0);
+
+	position: absolute;
+	top: 40px;
+	left: 0;
+
+}
+
+/* Navigation */
+
+.nav {
+	display: flex;
+	align-items: center;
+
+	margin: 0 40px;
+}
+
+
+.nav__link {
+    padding: 17px 10px;
+    width: 70px;
+    margin-right: 10px;
+    background-color: #111;
+
+	text-decoration: none;
+    text-align: center;
+	color: #4dfb3a;
+	font-weight: bold;
+
+	border-radius: 14px;
+
+	cursor: pointer;
+
+	transition: all .2s linear;
+}
+
+.nav__link:hover {
+
+    background-color: rgba(0, 0, 0, 0.37);
+	transition: all .2s linear;
+
+}
+
 /* Main Content */
 .main-content {
 	background-image: linear-gradient(135deg, #11de93, #33c5f1, #0e7ad6);
-	padding: 100px 40px;
+	padding: 130px 40px;
 	border-radius: 0 26px 0 0;
 
+	position: relative;
+}
 
+.main-content.main-content--contacts {
+	border-radius: 26px 26px 0 0;
 }
 .about {
 	width: 100%;
@@ -65,7 +149,7 @@ textarea {
 	margin: 0;
 	margin-bottom: 19px;
 }
-.about-tittle {
+.about-tittle, .contacts__tittle {
 	font-style: normal;
 	font-weight: bold;
 	font-size: 45px;
@@ -188,6 +272,9 @@ textarea {
 
 }
 /* Sidebar Photo */
+.sidebar__me {
+	margin: 0 auto;
+}
 .sidebar__splitter {
 	width: 100%;
 	margin: 20px 0 20px;
@@ -245,11 +332,15 @@ textarea {
 .contacts__map {
 	display: flex;
 	justify-content: center;
+
 	
 }
+.contacts--page {
+	margin-bottom: 40px;
+}
+
 .map {
 	border-radius: 26px;
-
 	opacity: .5;
 
 	transition: opacity .2s linear;
@@ -271,7 +362,10 @@ textarea {
 }
 
 
+
 .tech-skills ul {
+	display: flex;
+	flex-direction: column;
 	padding: 0;
 	line-height: 2;
 }
@@ -289,6 +383,9 @@ textarea {
 
 
 .soft-skills ul {
+	display: flex;
+	flex-direction: column;
+
 	padding: 0;
 	line-height: 2;
 }
@@ -526,11 +623,13 @@ textarea {
 		margin: 0 auto;
 	}
 	.main-content {
-		padding: 60px 30px;
+		padding: 130px 30px;
 		border-radius: 0;
 	}
 
-
+	.header {
+		justify-content: center;
+	}
 
 	.sidebar {
 		
