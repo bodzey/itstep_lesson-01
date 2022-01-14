@@ -21,6 +21,7 @@ iframe {
 table {
 	font-size: 24px;
 }
+
 .main__splitter {
 	margin: 0 0 20px;
   	height: 1px;
@@ -558,8 +559,8 @@ td>a:hover {
 	height: 20px;
 
 	position: absolute;
-	top: -30px;
-	right: -25px;
+    top: 13px;
+    right: 20px;
 
 	background: none;
 	border: none;
@@ -567,6 +568,7 @@ td>a:hover {
 	cursor: pointer;
 
 	transition: transform 0.1s linear;
+	filter: invert(100%);
 }
 .modal__close:focus {
 	outline: none;
