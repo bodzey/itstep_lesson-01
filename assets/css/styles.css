@@ -140,7 +140,6 @@ td>a:hover {
 	border-radius: 0 26px 0 0;
 	position: relative;
 	animation: gradient 2s linear infinite alternate;
-	height: 100vh;
 }
 
 .main-content.main-content--contacts {
