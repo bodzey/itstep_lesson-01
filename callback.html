@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <title>РЕЗЮМЕ</title>
+</head>
+<body>
+
+<!-- Main -->
+<div class="main">
+    <div class="page page--contacts">
+         
+        <!-- Main Content -->
+        <div class="main-content main-content--contacts">
+            <!-- Header -->
+            <header class="header">
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="/index.html">Головна</a>
+                    <a class="nav__link" href="/contacts.html">Контакти</a>
+                    <a class="nav__link" href="/callback.html">Зворотній зв'язок</a>
+                    <a class="nav__link" href="https://github.com/bodzey" target="_blank" >GitHub</a>
+                </nav>
+            </header>
+            <div class="container container--contacts">
+               
+                <!-- Contacts -->
+                <div class="contacts contacts--page">
+                  <h2 class="contacts__tittle">Зворотній звя'зок</h2>
+                  <div class="callback__inner">
+                    <div class="callback__form">
+                      <form action="#">
+                        <div class="form__item">
+                          <label for="lastName">Прізвище</label>
+                          <input type="text" name="lastname" id="lastName"/>
+                        </div>
+                        <div class="form__item">
+                          <label for="firstName">Ім'я</label>
+                          <input type="text" name="firsname" id="firstName"/>
+                        </div>
+                        <div class="form__item">
+                          <label for="email">E-mail</label>
+                          <input type="email" name="email" id="email"/>
+                        </div>
+                        <div class="form__item">
+                          <label for="email">Повідомлення</label>
+                          <br>
+                          <textarea cols="21" rows="8" name="message"></textarea>
+                        </div>
+                       
+
+                        <div class="form__item">
+                          <input class="checkbox" type="checkbox" name="yes" id="yes">
+                          <label for="yes">Погоджуюсь з умовами</label>
+                        </div>
+                        <div class="form__item">
+                          <input type="reset" value="Очистити">
+                        </div>
+                        <div class="form__item">
+                          <input type="submit" value="Надіслати">
+                        </div>
+                      </form>
+                    </div> <!--/callback__form-->
+                  </div> <!--/callback__inner-->
+                </div>
+                
+
+            </div> <!--/container-->
+        </div><!-- /Main Content -->
+    </div>
+
+    <footer class="footer">
+        <p class="footer__text">
+            Богдан Черняк &#169 2022 рік
+        </p>
+        
+    </footer>
+
+    
+</div><!-- /Main-->
+
+
+<!-- JavaScript -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/app.js"></script>
+
+</body>
+</html>
